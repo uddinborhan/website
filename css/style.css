@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  margin-top: 93px; }
+
+.navbar {
+  box-shadow: 2px 2px 5px #3292a6;
+  background: rgba(255, 255, 255, 0.9); }
+  .navbar .nav-item {
+    font-size: 1.4rem;
+    padding-right: 20px; }
+    .navbar .nav-item .nav-link {
+      color: #252525; }
+      .navbar .nav-item .nav-link:hover {
+        color: #3292a6; }
+    .navbar .nav-item:last-child {
+      padding-right: 0; }
+
+#showcase {
+  background-image: url(../img/mountains.jpg);
+  min-height: 600px;
+  position: relative; }
+  #showcase .primary {
+    background: rgba(50, 146, 156, 0.7);
+    min-height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+#subscribe {
+  background: #252525; }
+
+#boxes .border-info {
+  transition: background .2s linear; }
+  #boxes .border-info h3 {
+    color: #3292a6; }
+  #boxes .border-info:hover {
+    background: #3292a6;
+    color: #fff; }
+  #boxes .border-info:hover h3 {
+    color: #fff; }
+
+#boxes .ami_nai {
+  background: #3292a6;
+  transition: background .2s linear; }
+  #boxes .ami_nai h3 {
+    color: #fff; }
+  #boxes .ami_nai p {
+    color: #fff; }
+  #boxes .ami_nai:hover {
+    background: #fff;
+    border: 1px solid #3292a6; }
+  #boxes .ami_nai:hover h3 {
+    color: #3292a6; }
+  #boxes .ami_nai:hover p {
+    color: #333; }
+
+#arhors img {
+  margin-top: -55px; }
+
+#arhors .fa {
+  font-size: 25px; }
+
+#arhors .card {
+  transition: background .2s linear; }
+  #arhors .card:hover {
+    background: #3292a6;
+    color: #fff; }
+    #arhors .card:hover .fa {
+      color: #fff; }
+
+#arhors .mainBox {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: perspective(2000);
+  box-shadow: inset 2px 0 30px rgba(0, 0, 0, 0.5);
+  transition: 1s; }
+  #arhors .mainBox:hover {
+    transform: perspective(2000) rotate(-50deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5); }
+    #arhors .mainBox:hover .imgBox {
+      transform: rotateY(180deg); }
+  #arhors .mainBox .imgBox {
+    position: absolute;
+    width: 252px;
+    height: 477px;
+    transform-origin: left;
+    border: 1px solid #fff;
+    z-index: 1;
+    transition: 1s; }
+    #arhors .mainBox .imgBox img {
+      width: 100%;
+      height: 100%; }
+
+@media (max-width: 576px) {
+  #showcase h1 {
+    font-size: 4rem; } }

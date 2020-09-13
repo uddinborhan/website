@@ -1,0 +1,135 @@
+$primary: #3292a6;
+$overly: rgba(50, 146, 156, 0.7);
+$hover-color: #333;
+@mixin hover {
+    transition: background .2s linear;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin-top: 93px;
+}
+.navbar{
+    box-shadow: 2px 2px 5px $primary;
+    background: rgba(255,255,255,0.9);
+    .nav-item{
+        font-size: 1.4rem;
+        padding-right: 20px;
+        .nav-link{
+            color: #252525;
+            &:hover{
+                color: $primary;
+            }
+        }
+        &:last-child{
+            padding-right: 0;
+        }
+    }
+}
+#showcase{
+    background-image: url(../img/mountains.jpg);
+    min-height: 600px;
+    position: relative;
+    .primary{
+        background: $overly;
+        min-height: 600px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+#subscribe{
+    background: #252525;
+}
+#boxes{
+    .border-info{
+        @include hover;
+        h3{
+            color: $primary;
+        }
+        &:hover{
+            background: $primary;
+            color: #fff;
+        }
+        &:hover h3{
+            color: #fff;
+        }
+    }
+    .ami_nai{
+        background: $primary;
+        h3{
+            color: #fff;
+        }
+        p{
+            color: #fff;
+        }
+        @include hover;
+        &:hover{
+            background: #fff;
+            border: 1px solid $primary;
+        }
+        &:hover h3{
+            color: $primary;
+        }
+        &:hover p{
+            color: $hover-color;
+        }
+    }
+}
+#arhors{
+    img{
+        margin-top: -55px;
+    }
+    .fa{
+        font-size: 25px;
+    }
+    .card{
+        @include hover;
+        &:hover{
+            background: $primary;
+            color: #fff;
+            .fa{
+                color: #fff;
+            }
+        }
+    }
+    .mainBox{
+        position: relative;
+        transform-style: preserve-3d;
+        transform: perspective(2000);
+        box-shadow: inset 2px 0 30px rgba(0,0,0,0.5);
+        transition: 1s;
+        &:hover{
+            transform: perspective(2000) rotate(-50deg);
+            box-shadow: inset 20px 0 50px rgba(0,0,0,0.5);
+            .imgBox{
+                transform: rotateY(180deg);
+            }
+        }
+        .imgBox{
+            position: absolute;
+            width: 252px;
+            height: 477px;
+            transform-origin: left;
+            border: 1px solid #fff;
+            z-index: 1;
+            transition: 1s;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+@media(max-width: 576px){
+    #showcase{
+        h1{
+            font-size: 4rem;
+        }
+    }
+}
